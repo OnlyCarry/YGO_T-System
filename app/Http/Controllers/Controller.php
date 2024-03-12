@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Http\Models;
+use App\Http\Requests\Request;
 
 class Controller extends BaseController
 {
@@ -29,8 +30,16 @@ class Controller extends BaseController
         if(!$userModel){
             return response()->json([
                 'status' => 500,
-                'error' => 'Algo salio mal'
+                'error' => 'Algo salio mal al guardar usuario'
             ], 500);
+        } else {
+            $token = $userModel -> createToken('ApiCollectionTCG')->plainTextToken;
+
+            return response()->json([
+                'status' => 200,
+                'tocken' => $token
+            ], 200);
         }
+
     } 
 }
