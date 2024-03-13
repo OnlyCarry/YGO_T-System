@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Http\Models;
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
+use App\Models\Users;
 
 class Controller extends BaseController
 {
