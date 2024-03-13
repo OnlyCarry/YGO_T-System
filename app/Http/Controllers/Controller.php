@@ -19,7 +19,7 @@ class Controller extends BaseController
             'email' => $request->input('email'),
             'name' => $request->input('name'),
             'picture' => $request->input('picture'),
-            'give_name' => $request->input('give_name'),
+            'given_name' => $request->input('give_name'),
             'family_name' => $request->input('family_name'),
             'verified_email' => $request->input('verified_email'),
             'id' => $request->input('id')
