@@ -21,9 +21,3 @@ Route::middleware('auth:sanctum')->group(function() {
 
 Route::post('saveUser', [Controller::class, 'saveUser']);
 
-Route::post('/login', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
- 
-    return ['token' => $token->plainTextToken];
-});
-
