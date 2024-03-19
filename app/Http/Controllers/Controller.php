@@ -15,7 +15,7 @@ class Controller extends BaseController
     function SaveUser(Request $request) {
 
         $user = array(
-            'nickname' => $request->input('nickname'),
+            'nickname' => $request->nickname,
             'email' => $request->input('email'),
             'name' => $request->input('name'),
             'picture' => $request->input('picture'),
