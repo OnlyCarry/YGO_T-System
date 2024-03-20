@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 */
 
 Route::middleware('auth:sanctum')->group(function() {
-    //Route::post('saveUser', [Controller::class, 'saveUser']);
+    Route::get('lastesTournaments', [Controller::class, 'getLastesTournaments']);
 });
 
 Route::post('saveUser', [Controller::class, 'saveUser']);

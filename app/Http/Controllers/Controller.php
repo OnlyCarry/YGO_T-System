@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Models\Users;
+use App\Models\Tournaments;
 
 class Controller extends BaseController
 {
@@ -33,4 +34,13 @@ class Controller extends BaseController
         }
 
     } 
+
+    function getLastesTournaments() {
+        $tournaments = Tournaments::orderBy('start_date', 'desc')->take(5)->get();
+
+        return response()->json([
+            'status' => 200,
+            'tournaments' => $tournaments
+        ], 200);
+    }
 }
