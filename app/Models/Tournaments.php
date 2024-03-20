@@ -9,6 +9,8 @@ namespace App\Models;
 class Tournament extends Model
 {
 
+    protected $table = 'tournaments';
+
     /**
      * The attributes that are mass assignable.
      *
