@@ -19,6 +19,9 @@ class Controller extends BaseController
 
         $userModel = Users::firstOrCreate($user);
 
+        $user = Users::where('id',$user['id'])->first();
+        Auth::guard('web')->login($user);
+
         if(!$userModel){
             return response()->json([
                 'status' => 500,
