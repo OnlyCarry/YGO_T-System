@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('cache:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+
+    return "Cleared!";
     // return what you want
 });
