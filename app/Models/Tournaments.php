@@ -2,12 +2,17 @@
 use Illuminate\7Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use HasFactory;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+
 
 namespace App\Models;
 
 
 class Tournament extends Model
 {
+
+    use HasApiTokens, HasFactory, Notifiable;
 
     protected $table = 'tournaments';
 
