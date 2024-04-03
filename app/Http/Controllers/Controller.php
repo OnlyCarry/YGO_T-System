@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Models\Users;
-use App\Models\Tournaments;
+use App\Models\Tournament;
 
 class Controller extends BaseController
 {
