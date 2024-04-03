@@ -15,10 +15,7 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::middleware('auth:api')->group(function() {
-    Route::get('lastesTournaments', [Controller::class, 'getLastesTournaments']);
-});
-
 Route::post('saveUser', [Controller::class, 'saveUser']);
+Route::get('lastesTournaments', [Controller::class, 'getLastesTournaments']);
 
 
