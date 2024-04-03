@@ -29,11 +29,10 @@ class Controller extends BaseController
                 'error' => 'Algo salio mal al guardar usuario'
             ], 500);
         } else {
-            $token = $userModel -> createToken('ApiCollectionTCG')->plainTextToken;
 
             return response()->json([
                 'status' => 200,
-                'tocken' => $token
+                'tocken' => "Success"
             ], 200);
         }
 
