@@ -21,7 +21,7 @@ class Controller extends BaseController
         $userModel = Users::firstOrCreate($user);
 
         $user = Users::where('id',$user['id'])->first();
-        Auth::guard('web')->login($user);
+        //Auth::guard('web')->login($user);
 
         if(!$userModel){
             return response()->json([
@@ -29,6 +29,7 @@ class Controller extends BaseController
                 'error' => 'Algo salio mal al guardar usuario'
             ], 500);
         } else {
+            //$token = $userModel -> createToken('ApiCollectionTCG')->plainTextToken;
 
             return response()->json([
                 'status' => 200,
