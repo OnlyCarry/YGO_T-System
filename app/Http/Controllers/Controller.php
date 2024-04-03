@@ -40,7 +40,7 @@ class Controller extends BaseController
     } 
 
     function getLastesTournaments() {
-        $tournaments = Tournaments::orderBy('start_date', 'desc')->take(5)->get();
+        $tournaments = Tournament::orderBy('start_date', 'desc')->take(5)->get();
 
         return response()->json([
             'status' => 200,
