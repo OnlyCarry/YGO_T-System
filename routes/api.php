@@ -15,9 +15,10 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::middleware('auth:sanctum')->group(function() {
+Route::middleware('auth:api')->group(function() {
     Route::get('lastesTournaments', [Controller::class, 'getLastesTournaments']);
 });
 
 Route::post('saveUser', [Controller::class, 'saveUser']);
+
 

@@ -1,12 +1,11 @@
 <?php
-use Illuminate\7Database\Eloquent\Factories\HasFactory;
+namespace App\Models;
+
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
-
-namespace App\Models;
 
 
 class Tournament extends Model
